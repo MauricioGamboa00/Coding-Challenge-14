@@ -7,6 +7,11 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
     const csTicket = document.createElement('div'); // Creating ticket container
     csTicket.setAttribute('class', 'supportTicket'); // Setting attributes for customer support tickets
     
+    // Task 3 Modifications
+
+    if(priorityLevel === 'High' ){
+        csTicket.classList.add('HighPriority')
+    }
 
     const heading = document.createElement('h3'); // Creating a heading as the customer name
     heading.textContent = customerName;
@@ -32,4 +37,20 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
 
 createSupportTicket("Rick Owens", "Shoes never arrived.", "High"); // Created a new support ticket
 createSupportTicket("Steve Jobs", "Phone is occasionally lagging.", "Low"); // Created a new support ticket
-createSupportTicket("Keven Hart", "Pants sent were to large.", "high"); // Created a new support ticket
+createSupportTicket("Keven Hart", "Pants sent were to large.", "High"); // Created a new support ticket
+
+// Task 3 Converting NodeLists to Arrays for Bulk Updates
+
+function selectHighPriorityTickets() {
+const csTicket = document.querySelectorAll('.supportTicket.HighPriority');  // Used query selectorAll to select all high priority support tickets
+const csHighPriorityTicketsArray = [...csTicket]; // Converting the nodelist to an array
+
+
+csHighPriorityTicketsArray.forEach(csTicket =>
+    csTicket.style.backgroundColor = 'red'
+); // Changing the color of high priority tickets to a brighter red
+
+}
+
+selectHighPriorityTickets(); // Selecting all high priority tickets
+
