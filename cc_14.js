@@ -25,6 +25,19 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
     const resolveButton = document.createElement('button') // Creating a resolve button
     resolveButton.textContent = 'Resolve'
 
+    // Task 4 Modifications
+
+    resolveButton.addEventListener('click', (event) => {
+        console.log(heading.textContent,"Support Ticket Resolved")
+        csTicket.remove()
+        
+        event.stopPropagation(); // 
+})
+
+csTicket.addEventListener('click', (event) => {
+    console.log(heading.textContent, "Support Ticket Clicked")
+}) 
+
     ticketContainer.appendChild(csTicket) // Appending ticket div to ticket container
 
 
@@ -53,4 +66,3 @@ csHighPriorityTicketsArray.forEach(csTicket =>
 }
 
 selectHighPriorityTickets(); // Selecting all high priority tickets
-
