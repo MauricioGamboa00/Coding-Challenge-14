@@ -76,11 +76,11 @@ csTicket.addEventListener('click', (event) => {
 
 
 
-    csTicket.appendChild(heading); // Appending the heading to ticket div
-    csTicket.appendChild(paragraph); // Appending the paragraph to ticket div
-    csTicket.appendChild(label); // Appending the label to ticket div
-    csTicket.appendChild(resolveButton); // Appending the resolve button to ticket div
-    csTicket.append(editButton); // Appending the edit button to ticket div
+    csTicket.appendChild(heading); // Appending the heading to csticket div
+    csTicket.appendChild(paragraph); // Appending the paragraph to csticket div
+    csTicket.appendChild(label); // Appending the label to csticket div
+    csTicket.appendChild(resolveButton); // Appending the resolve button to csticket div
+    csTicket.append(editButton); // Appending the edit button to csticket div
 };
 
 createSupportTicket("Rick Owens", "Shoes never arrived.", "High"); // Created a new support ticket
