@@ -29,16 +29,16 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
 
     resolveButton.addEventListener('click', (event) => {
         console.log(heading.textContent,"Support Ticket Resolved")
-        csTicket.remove()
+        csTicket.remove(); // Added an Event listener when to log a message to the console when resolve is clicked and remove the ticket
         
-        event.stopPropagation(); // 
+        event.stopPropagation(); // Used stop propagation to prevent logging of parent container message
 })
 
 csTicket.addEventListener('click', (event) => {
     console.log(heading.textContent, "Support Ticket Clicked")
-}) 
+}); // Message appears in console when a support ticket is clicked
 
-    ticketContainer.appendChild(csTicket) // Appending ticket div to ticket container
+    ticketContainer.appendChild(csTicket); // Appending ticket div to ticket container
 
 
 
