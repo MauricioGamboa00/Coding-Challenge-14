@@ -23,7 +23,7 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
 
     if(priorityLevel === 'High' ){
         csTicket.classList.add('HighPriority')
-    } // added a class to sort High Priority Tickets
+    }; // added a class to sort High Priority Tickets
 
     // Task 5 Modifications
 
@@ -43,7 +43,7 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
         const saveButton = document.createElement('button') // Create a save butten when edit ticket it clicked
         saveButton.textContent = 'Save Changes';
 
-        saveButton.addEventListener('click', (event) => { // Added an Event Listener to the Save Button
+        saveButton.addEventListener('click', (event) => {; // Added an Event Listener to the Save Button
             heading.textContent = nameInput.value;
             paragraph.textContent = discInput.value;
             label.textContent = priorityLevelInput.value;
@@ -72,15 +72,15 @@ csTicket.addEventListener('click', (event) => {
     console.log(heading.textContent, "Support Ticket Clicked")
 }); // Message appears in console when a support ticket is clicked
 
-    ticketContainer.appendChild(csTicket); // Appending ticket div to ticket container
+    ticketContainer.appendChild(csTicket); // Appending csticket  to ticket container div
 
 
 
-    csTicket.appendChild(heading); // Appending the heading to csticket div
-    csTicket.appendChild(paragraph); // Appending the paragraph to csticket div
-    csTicket.appendChild(label); // Appending the label to csticket div
-    csTicket.appendChild(resolveButton); // Appending the resolve button to csticket div
-    csTicket.append(editButton); // Appending the edit button to csticket div
+    csTicket.appendChild(heading); // Appending the heading to csticket 
+    csTicket.appendChild(paragraph); // Appending the paragraph to csticket 
+    csTicket.appendChild(label); // Appending the label to csticket 
+    csTicket.appendChild(resolveButton); // Appending the resolve button to csticket 
+    csTicket.append(editButton); // Appending the edit button to csticket 
 };
 
 createSupportTicket("Rick Owens", "Shoes never arrived.", "High"); // Created a new support ticket
