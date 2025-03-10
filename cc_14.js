@@ -85,7 +85,7 @@ csTicket.addEventListener('click', (event) => {
 
 createSupportTicket("Rick Owens", "Shoes never arrived.", "High"); // Created a new support ticket
 createSupportTicket("Steve Jobs", "Phone is occasionally lagging.", "Low"); // Created a new support ticket
-createSupportTicket("Keven Hart", "Pants sent were to large.", "High"); // Created a new support ticket
+createSupportTicket("Keven Hart", "Pants sent were too large.", "High"); // Created a new support ticket
 
 // Task 3 Converting NodeLists to Arrays for Bulk Updates
 
