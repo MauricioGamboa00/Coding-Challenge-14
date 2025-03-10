@@ -19,6 +19,11 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
     const resolveButton = document.createElement('button'); // Creating a resolve button
     resolveButton.textContent = 'Resolve'
 
+    csTicket.appendChild(heading); // Appending the heading to csticket 
+    csTicket.appendChild(paragraph); // Appending the paragraph to csticket 
+    csTicket.appendChild(label); // Appending the label to csticket 
+    csTicket.appendChild(resolveButton); // Appending the resolve button to csticket
+
     // Task 3 Modifications
 
     if(priorityLevel === 'High' ){
@@ -29,6 +34,8 @@ function createSupportTicket(customerName, issueDisc, priorityLevel){
 
     const editButton = document.createElement('button'); // Creating an Edit Button
     editButton.textContent = 'Edit Ticket'
+
+    csTicket.append(editButton); // Appending the edit button to csticket 
 
     editButton.addEventListener('click', (event) => {
         const nameInput = document.createElement('input'); // Create an input field for customer name
@@ -73,14 +80,7 @@ csTicket.addEventListener('click', (event) => {
 }); // Message appears in console when a support ticket is clicked
 
     ticketContainer.appendChild(csTicket); // Appending csticket  to ticket container div
-
-
-
-    csTicket.appendChild(heading); // Appending the heading to csticket 
-    csTicket.appendChild(paragraph); // Appending the paragraph to csticket 
-    csTicket.appendChild(label); // Appending the label to csticket 
-    csTicket.appendChild(resolveButton); // Appending the resolve button to csticket 
-    csTicket.append(editButton); // Appending the edit button to csticket 
+   
 };
 
 createSupportTicket("Rick Owens", "Shoes never arrived.", "High"); // Created a new support ticket
